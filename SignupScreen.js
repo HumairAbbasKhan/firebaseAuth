@@ -10,17 +10,17 @@ const SignupScreen = () => {
 
   const handleSignup = async () => {
     try {
+        
       // Basic validation
       if (!name || !email || !password) {
         console.log("Please fill in all fields");
         return;
       }
 
-      // Create user with email and password
+     
       const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
       const user = userCredential.user;
 
-      // Update user display name (optional)
       await user.updateProfile({
         displayName: name,
       });
