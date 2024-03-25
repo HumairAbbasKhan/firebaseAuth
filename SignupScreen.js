@@ -1,7 +1,7 @@
 // SignupScreen.js
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import { firebase } from '@react-native-firebase/auth'; // Import firebase from '@react-native-firebase/auth'
+import { firebase } from '@react-native-firebase/auth'; 
 
 const SignupScreen = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +11,7 @@ const SignupScreen = () => {
   const handleSignup = async () => {
     try {
         
-      // Basic validation
+     
       if (!name || !email || !password) {
         console.log("Please fill in all fields");
         return;
